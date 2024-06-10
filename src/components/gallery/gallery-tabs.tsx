@@ -1,0 +1,89 @@
+import Container from "../container";
+import SubTitle from "../sub-title";
+import { Tabs } from "@mantine/core";
+import { body } from "@/lib/fonts";
+import Gallery from "./gallery";
+// import { photos, gallery } from "@/lib/data/gallery";
+import { FC } from "react";
+
+type EventGallery = {
+  name: string;
+  images: string[];
+};
+
+type GalleryTabsProps = {
+  gallery: EventGallery[];
+};
+
+const GalleryTabs: FC<GalleryTabsProps> = ({ gallery }) => {
+  const allImages = gallery.reduce(
+    (result: string[], current: EventGallery) => {
+      return [...result, ...current.images];
+    },
+    []
+  );
+
+  const tabTitles = gallery.map((gallery) => gallery.name);
+
+  const shuffleImages = (images: string[]) => {
+    for (let i = images.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let k = images[i];
+
+      images[i] = images[j];
+      images[j] = k;
+    }
+
+    return images;
+  };
+
+  const shuffledimages = shuffleImages(allImages);
+
+  return (
+    <Container>
+      <div className="space-y-10 section-p">
+        <SubTitle
+          text="Memories from past events"
+          className="text-[#EF4A7B] text-center capitalize"
+        />
+
+        <Tabs
+          defaultValue="All"
+          classNames={{
+            tab: `${body.className} hover:bg-transparent text-[#747373] font-semibold`,
+            tabsList: "border-b-0",
+          }}
+          variant="default"
+        >
+          <Tabs.List position="center" grow>
+            <Tabs.Tab value="All">All Images</Tabs.Tab>
+
+            {tabTitles.length > 2 &&
+              tabTitles.map((title, idx) => {
+                return (
+                  <Tabs.Tab key={idx} value={title}>
+                    <p className="capitalize">{title}</p>
+                  </Tabs.Tab>
+                );
+              })}
+          </Tabs.List>
+
+          <Tabs.Panel value="All" pt="xs">
+            <Gallery images={shuffledimages} />
+          </Tabs.Panel>
+
+          {gallery.length > 2 &&
+            gallery.map((gallery, idx) => {
+              return (
+                <Tabs.Panel key={idx} value={gallery.name} pt="xs">
+                  <Gallery images={gallery.images} />
+                </Tabs.Panel>
+              );
+            })}
+        </Tabs>
+      </div>
+    </Container>
+  );
+};
+
+export default GalleryTabs;

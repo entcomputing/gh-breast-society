@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    overscroll-behavior: none;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.mantine-Tabs-tab[data-active] {
+  border-color: transparent;
+  color: #EF4A7B;
+  text-decoration: underline;
+}
+
+.mantine-Tabs-tab[data-active]:hover {
+  border-color: transparent;
+  color: #EF4A7B;
+  text-decoration: underline;
+}
+
+.mantine-Tabs-tab:hover {
+  border-color: transparent;
+  color: #EF4A7B;
+}
+
+/* .mantine-Tabs-tab {
+  border-color: #EF4A7B;
+  color: #EF4A7B;
+} */
+  
+  /* .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  /* .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+  
+
+@layer utilities {
+    .section-p {
+        @apply py-12 lg:py-14;
+    }
+  }
