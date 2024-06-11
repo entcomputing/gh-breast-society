@@ -28,7 +28,7 @@ const RecentProjects = ({ recentProjects }) => {
             <Fade direction="up" duration={1500} triggerOnce>
               <div className="flex items-center justify-between gap-5">
                 <h1 className="font-semibold text-transparent text-[20px] lg:text-[25px] md:w-[70%] bg-gradient-to-b from-[#EF4A7B] to-[#F858CB] bg-clip-text">
-                  {"Pfizer: Enhancing Management Of Breast Cancer Patients"}
+                  {"Pfizer: Enhancing Management of breast cancer Patients to improve Outcomes With Education, Resources and Mentorship for Effective Navigational Transition in Ghana (The EMPOWERMENT Study)"}
                 </h1>
 
                 <div className="flex-none bg-gradient-to-b from-[#EF4A7B] to-[#F858CB] text-center rounded-[6px] text-white w-24 h-24 flex flex-col items-center justify-center">
