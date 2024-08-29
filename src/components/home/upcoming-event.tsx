@@ -8,7 +8,7 @@ import Container from "../container";
 import { Fade } from "react-awesome-reveal";
 
 // imgs
-import upcoming from "../../../public/imgs/upcoming.png";
+import upcoming from "../../../public/imgs/upcoming1.png";
 
 const UpcomingEvent = () => {
   const router = useRouter();
@@ -33,12 +33,7 @@ const UpcomingEvent = () => {
             <p
               className={`${body.className} font-extralight leading-loose text-center lg:text-left`}
             >
-              Discover upcoming events where we raise awareness, support, and
-              funds for breast cancer research and programs. From inspiring
-              walks to informative seminars and fundraising activities, join us
-              in making a meaningful impact in the fight against breast cancer.
-              Check our calendar below and save these important dates. Together,
-              we can make a difference in many lives.
+              Improving outcomes and reducing disparities in breast care in Ghana. The role of BSoG and other stakeholders.
             </p>
           </Fade>
 
