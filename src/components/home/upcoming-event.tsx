@@ -9,6 +9,7 @@ import { Fade } from "react-awesome-reveal";
 
 // imgs
 import upcoming from "../../../public/imgs/upcoming1.png";
+import walk from "../../../public/imgs/walk.png";
 
 const UpcomingEvent = () => {
   const router = useRouter();
@@ -17,7 +18,7 @@ const UpcomingEvent = () => {
     <Container>
       <div className="flex flex-col items-center gap-10 lg:gap-20 lg:items-stretch lg:flex-row section-p">
         <Image
-          src={upcoming}
+          src={walk}
           alt=""
           width={300}
           height={300}
@@ -33,7 +34,7 @@ const UpcomingEvent = () => {
             <p
               className={`${body.className} font-extralight leading-loose text-center lg:text-left`}
             >
-              Improving outcomes and reducing disparities in breast care in Ghana. The role of BSoG and other stakeholders.
+              Stop The Sigma. Be Supportive.
             </p>
           </Fade>
 
