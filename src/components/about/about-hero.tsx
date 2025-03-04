@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 // imgs
 import drhannah from "../../../public/imgs/members/dr-hannah.jpeg";
-import drnsaful from "../../../public/imgs/members/nsaful.jpeg";
+import drnsaful from "../../../public/imgs/members/nsaful.jpg";
 
 const AboutHero = () => {
   return (
