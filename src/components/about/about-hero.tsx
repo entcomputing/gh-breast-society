@@ -5,6 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 // imgs
 import drhannah from "../../../public/imgs/members/dr-hannah.jpeg";
+import drnsaful from "../../../public/imgs/members/nsaful.jpeg";
 
 const AboutHero = () => {
   return (
@@ -28,13 +29,13 @@ const AboutHero = () => {
                 </Fade>
 
                 <p className="xl:text-xl lg:leading-tight lg:w-[50%] text-center lg:text-left italic font-medium">
-                  &#8226; Dr. Hannah N. A. Ayettey Anie's
+                  &#8226; Dr. Josephine Nsaful
                 </p>
               </div>
 
               <div className="relative w-[363px] h-[373px]">
                 <Image
-                  src={drhannah}
+                  src={drnsaful}
                   alt=""
                   priority
                   className="flex-none object-cover rounded-md"
