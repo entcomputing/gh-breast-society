@@ -1,10 +1,10 @@
 import { Fragment } from "react";
-import Lightbox from "react-awesome-lightbox";
+import Lightbox from "yet-another-react-lightbox";
 import Image from "next/image";
 import { Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
-import "react-awesome-lightbox/build/style.css";
+import "yet-another-react-lightbox/styles.css";
 
 const GalleryImage = ({ images, image, idx }) => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -26,10 +26,10 @@ const GalleryImage = ({ images, image, idx }) => {
 
       <Modal opened={opened} fullScreen>
         <Lightbox
-          image={images.length === 1 && image}
-          images={images.length > 1 && images}
-          onClose={close}
-          startIndex={idx}
+          open={opened}
+          index={idx}
+          close={close}
+          slides={Array.isArray(images) ? images.map((src) => ({ src })) : [{ src: image }]}
         />
       </Modal>
     </Fragment>

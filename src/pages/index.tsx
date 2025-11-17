@@ -3,6 +3,7 @@ import {
   UpcomingEvent,
   WhoWeAre,
   LaunchEvent,
+  Journal,
   Stories,
   ContactUs,
   Partners,
@@ -15,6 +16,7 @@ const Home = () => {
       <UpcomingEvent />
       <WhoWeAre />
       <LaunchEvent />
+      <Journal />
       <Stories />
       <ContactUs />
       <Partners />

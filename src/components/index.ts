@@ -10,6 +10,7 @@ export { default as GradientButton } from "./buttons/gradient-button";
 export { default as Hero } from "./home/hero";
 export { default as UpcomingEvent } from "./home/upcoming-event";
 export { default as LaunchEvent } from "./home/launch-event";
+export { default as Journal } from "./home/journal";
 export { default as WhoWeAre } from "./home/who-we-are";
 export { default as Stories } from "./home/survivor-stories";
 export { default as ContactUs } from "./contact-us";
